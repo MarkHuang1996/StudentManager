@@ -16,5 +16,10 @@ namespace StudentManager
         {
             InitializeComponent();
         }
+
+        private void FrmScoreManage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
