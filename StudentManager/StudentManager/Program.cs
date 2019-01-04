@@ -16,7 +16,26 @@ namespace StudentManager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMain());
+            FrmUserLogin objFrmLogin = new FrmUserLogin();
+            DialogResult result = objFrmLogin.ShowDialog();
+
+            //判断是否成功
+            if (result == DialogResult.OK)
+            {
+                Application.Run(new FrmMain());
+
+            }
+            else
+            {
+                Application.Exit();
+
+            }
         }
+
+        //
+        public static Models.sysAdmin objCurrentAdmin = null;
+
     }
 }
+
+

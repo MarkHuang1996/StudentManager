@@ -57,6 +57,7 @@
             this.btnClose.TabIndex = 10;
             this.btnClose.Text = "Exit";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnLogin
             // 
@@ -67,6 +68,7 @@
             this.btnLogin.TabIndex = 9;
             this.btnLogin.Text = "Log In";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtLoginPwd
             // 

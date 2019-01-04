@@ -32,8 +32,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.systemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pwdChangePToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentManagerTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewStudentAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentsInfoIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -89,19 +89,19 @@
             // pwdChangePToolStripMenuItem
             // 
             this.pwdChangePToolStripMenuItem.Name = "pwdChangePToolStripMenuItem";
-            this.pwdChangePToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.pwdChangePToolStripMenuItem.Size = new System.Drawing.Size(215, 30);
             this.pwdChangePToolStripMenuItem.Text = "Pwd Change(&P)";
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
-            this.exitToolStripMenuItem.Text = "Exit";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(249, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(212, 6);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(215, 30);
+            this.exitToolStripMenuItem.Text = "Exit";
             // 
             // studentManagerTToolStripMenuItem
             // 
@@ -156,7 +156,7 @@
             // attenceCheckToolStripMenuItem
             // 
             this.attenceCheckToolStripMenuItem.Name = "attenceCheckToolStripMenuItem";
-            this.attenceCheckToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.attenceCheckToolStripMenuItem.Size = new System.Drawing.Size(238, 30);
             this.attenceCheckToolStripMenuItem.Text = "Attendance Check";
             // 
             // toolStrip1
@@ -280,9 +280,9 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(291, 139);
+            this.panel1.Location = new System.Drawing.Point(223, 131);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1370, 867);
+            this.panel1.Size = new System.Drawing.Size(1226, 720);
             this.panel1.TabIndex = 10;
             // 
             // FrmMain
@@ -298,6 +298,7 @@
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "[BIT Student System]";
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
