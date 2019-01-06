@@ -51,7 +51,7 @@ namespace StudentManager
 
             try
             {
-                objSysAdminService.AdminLogin(objAdmin);
+                objAdmin = objSysAdminService.AdminLogin(objAdmin);
                 if (objAdmin != null)
                 {
                     //save Admin info
@@ -62,18 +62,14 @@ namespace StudentManager
                 }
                 else
                 {
-
+                    MessageBox.Show("UserId or Password wrong!");
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("sql connection error!!!");
 
-
-
             }
-          
-
 
         }
 
@@ -81,5 +77,34 @@ namespace StudentManager
         {
             this.Close();
         }
+
+        #region UI
+
+        private void txtLoginId_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue == 13)
+            {
+                if (this.txtLoginId.Text.Trim().Length != 0)
+                {
+                    this.txtLoginPwd.Focus();
+                }
+            }
+           
+        }
+
+        private void txtLoginPwd_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyValue == 13)
+            {
+                if (this.txtLoginPwd.Text.Trim().Length != 0)
+                {
+                    btnLogin_Click(null, null);
+                }
+
+            }
+        }
+        #endregion
+
+
     }
 }

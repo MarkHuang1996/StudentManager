@@ -30,7 +30,6 @@
         {
             this.btnClose = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.cboClassName = new System.Windows.Forms.ComboBox();
             this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
             this.rdoFemale = new System.Windows.Forms.RadioButton();
             this.rdoMale = new System.Windows.Forms.RadioButton();
@@ -40,15 +39,14 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtStudentName = new System.Windows.Forms.TextBox();
+            this.txtFName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtLName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboClassName = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnClose
@@ -70,17 +68,7 @@
             this.btnAdd.TabIndex = 28;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
-            // 
-            // cboClassName
-            // 
-            this.cboClassName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboClassName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboClassName.FormattingEnabled = true;
-            this.cboClassName.Location = new System.Drawing.Point(202, 246);
-            this.cboClassName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cboClassName.Name = "cboClassName";
-            this.cboClassName.Size = new System.Drawing.Size(156, 28);
-            this.cboClassName.TabIndex = 23;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // dtpBirthday
             // 
@@ -172,16 +160,6 @@
             this.label5.TabIndex = 16;
             this.label5.Text = "Phone Number：";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(105, 249);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 20);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Year：";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -202,14 +180,14 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "Gender：";
             // 
-            // txtStudentName
+            // txtFName
             // 
-            this.txtStudentName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtStudentName.Location = new System.Drawing.Point(202, 65);
-            this.txtStudentName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtStudentName.Name = "txtStudentName";
-            this.txtStudentName.Size = new System.Drawing.Size(149, 26);
-            this.txtStudentName.TabIndex = 17;
+            this.txtFName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFName.Location = new System.Drawing.Point(202, 65);
+            this.txtFName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtFName.Name = "txtFName";
+            this.txtFName.Size = new System.Drawing.Size(149, 26);
+            this.txtFName.TabIndex = 17;
             // 
             // label1
             // 
@@ -231,35 +209,35 @@
             this.label9.TabIndex = 18;
             this.label9.Text = "Last Name：";
             // 
-            // textBox1
+            // txtLName
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(509, 67);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 26);
-            this.textBox1.TabIndex = 17;
+            this.txtLName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLName.Location = new System.Drawing.Point(509, 67);
+            this.txtLName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtLName.Name = "txtLName";
+            this.txtLName.Size = new System.Drawing.Size(149, 26);
+            this.txtLName.TabIndex = 17;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(412, 249);
+            this.label4.Location = new System.Drawing.Point(102, 254);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 20);
             this.label4.TabIndex = 15;
             this.label4.Text = "Course：";
             // 
-            // comboBox1
+            // cboClassName
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(514, 246);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(156, 28);
-            this.comboBox1.TabIndex = 23;
+            this.cboClassName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboClassName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboClassName.FormattingEnabled = true;
+            this.cboClassName.Location = new System.Drawing.Point(204, 251);
+            this.cboClassName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cboClassName.Name = "cboClassName";
+            this.cboClassName.Size = new System.Drawing.Size(156, 28);
+            this.cboClassName.TabIndex = 23;
             // 
             // FrmAddStudent
             // 
@@ -268,7 +246,6 @@
             this.ClientSize = new System.Drawing.Size(740, 634);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.cboClassName);
             this.Controls.Add(this.dtpBirthday);
             this.Controls.Add(this.rdoFemale);
@@ -280,15 +257,16 @@
             this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtLName);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtStudentName);
+            this.Controls.Add(this.txtFName);
             this.Controls.Add(this.label1);
             this.Name = "FrmAddStudent";
             this.Text = "AddStudent";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmAddStudent_FormClosed);
+            this.Load += new System.EventHandler(this.FrmAddStudent_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,7 +276,6 @@
 
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.ComboBox cboClassName;
         private System.Windows.Forms.DateTimePicker dtpBirthday;
         private System.Windows.Forms.RadioButton rdoFemale;
         private System.Windows.Forms.RadioButton rdoMale;
@@ -308,14 +285,13 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtStudentName;
+        private System.Windows.Forms.TextBox txtFName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtLName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboClassName;
     }
 }

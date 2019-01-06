@@ -34,6 +34,7 @@ namespace StudentManager
 
         //
         public static Models.sysAdmin objCurrentAdmin = null;
+       
 
     }
 }

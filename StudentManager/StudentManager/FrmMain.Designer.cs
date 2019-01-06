@@ -187,6 +187,7 @@
             this.tsbAddStudent.Name = "tsbAddStudent";
             this.tsbAddStudent.Size = new System.Drawing.Size(180, 29);
             this.tsbAddStudent.Text = "Add New Student";
+            this.tsbAddStudent.Click += new System.EventHandler(this.tsbAddStudent_Click);
             // 
             // toolStripButton1
             // 
@@ -298,6 +299,7 @@
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "[BIT Student System]";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
