@@ -15,6 +15,7 @@ namespace StudentManager
     public partial class FrmAddStudent : Form
     {
         private StudentCourseService objStudentCourseService = new StudentCourseService();
+        private StudentService objStudentService = new StudentService();
         public FrmAddStudent()
         {
             InitializeComponent();
@@ -56,7 +57,71 @@ namespace StudentManager
                 return;
             }
 
-                #endregion
+            #endregion
+
+            #region 封装new Student
+
+            Student objstudent = new Student()
+            {
+                FirstName = this.txtFName.Text.Trim(),
+                LastName = this.txtLName.Text.Trim(),
+                Gender = rdoMale.Checked ? "Male" : "Female",
+                Birthday = Convert.ToDateTime(this.dateTimePicker1.Text),
+                Age =Convert.ToInt32( DateTime.Now.Year - Convert.ToDateTime(this.dateTimePicker1.Text).Year),
+                PhoneNumber = this.txtPhoneNumber.Text.Trim(),
+                Address = this.txtAddress.Text.Trim(),
+                ClassId = Convert.ToInt32(this.cboClassName.SelectedValue)
+              
+
+            };
+
+
+
+            #endregion
+
+            #region Call the backend code the add the student object
+
+            try
+            {
+                if(objStudentService.AddStudent(objstudent) == 1)
+                {
+                    DialogResult result = MessageBox.Show("Suceessfull add  the new Student,want to add other student?","Suceess",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+                    if(result == DialogResult.Yes)
+                    {
+                        this.cboClassName.SelectedIndex = -1;
+                        this.rdoFemale.Checked = false;
+                        this.rdoMale.Checked = false;
+                        this.dateTimePicker1.Value = DateTime.Today;
+
+                        foreach (Control item in this.Controls)
+                        {
+                             if(item is TextBox)
+                            {
+                                item.Text = "";
+                            }
+                            this.txtFName.Focus();
+                        }
+                    }
+                    else
+                    {
+                        this.Close();
+                    }
+
+
+                }
             }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+
+            }
+            #endregion
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
+}

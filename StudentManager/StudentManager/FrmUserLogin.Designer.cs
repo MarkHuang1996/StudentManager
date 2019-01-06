@@ -89,7 +89,7 @@
             this.txtLoginId.Name = "txtLoginId";
             this.txtLoginId.Size = new System.Drawing.Size(202, 26);
             this.txtLoginId.TabIndex = 5;
-            this.txtLoginId.Text = "1001";
+            this.txtLoginId.Text = "1000";
             this.txtLoginId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLoginId_KeyDown);
             // 
             // label2

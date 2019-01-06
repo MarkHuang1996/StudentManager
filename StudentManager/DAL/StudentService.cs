@@ -32,8 +32,8 @@ namespace DAL
         {
 
             StringBuilder sqlbuilder = new StringBuilder();
-            sqlbuilder.Append("insert into Studdents(FirstName,LastName,Gender,Birthday,Age,PhoneNumber,StudentAddress,Classid)");
-            sqlbuilder.Append(" values('{0}','{1}','{2}',{3},{4},'{5}','{6}',{7})");
+            sqlbuilder.Append("insert into Students(FirstName,LastName,Gender,Birthday,Age,PhoneNumber,StudentAddress,Classid)");
+            sqlbuilder.Append(" values('{0}','{1}','{2}','{3}',{4},'{5}','{6}',{7})");
             //解析对象
             string sql = string.Format(sqlbuilder.ToString(), objStudent.FirstName,
                 objStudent.LastName, objStudent.Gender, objStudent.Birthday, objStudent.Age, objStudent.PhoneNumber, 

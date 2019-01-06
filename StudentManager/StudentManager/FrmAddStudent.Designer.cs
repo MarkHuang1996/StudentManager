@@ -30,13 +30,10 @@
         {
             this.btnClose = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
             this.rdoFemale = new System.Windows.Forms.RadioButton();
             this.rdoMale = new System.Windows.Forms.RadioButton();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtCardNo = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,21 +44,23 @@
             this.txtLName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cboClassName = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(386, 566);
+            this.btnClose.Location = new System.Drawing.Point(361, 494);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(112, 38);
             this.btnClose.TabIndex = 29;
             this.btnClose.Text = "Cancle";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(202, 566);
+            this.btnAdd.Location = new System.Drawing.Point(177, 494);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(112, 38);
@@ -70,15 +69,6 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // dtpBirthday
-            // 
-            this.dtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpBirthday.Location = new System.Drawing.Point(202, 181);
-            this.dtpBirthday.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dtpBirthday.Name = "dtpBirthday";
-            this.dtpBirthday.Size = new System.Drawing.Size(156, 26);
-            this.dtpBirthday.TabIndex = 22;
-            // 
             // rdoFemale
             // 
             this.rdoFemale.AutoSize = true;
@@ -86,7 +76,7 @@
             this.rdoFemale.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rdoFemale.Name = "rdoFemale";
             this.rdoFemale.Size = new System.Drawing.Size(87, 24);
-            this.rdoFemale.TabIndex = 21;
+            this.rdoFemale.TabIndex = 3;
             this.rdoFemale.TabStop = true;
             this.rdoFemale.Text = "Female";
             this.rdoFemale.UseVisualStyleBackColor = true;
@@ -98,7 +88,7 @@
             this.rdoMale.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rdoMale.Name = "rdoMale";
             this.rdoMale.Size = new System.Drawing.Size(68, 24);
-            this.rdoMale.TabIndex = 20;
+            this.rdoMale.TabIndex = 2;
             this.rdoMale.TabStop = true;
             this.rdoMale.Text = "Male";
             this.rdoMale.UseVisualStyleBackColor = true;
@@ -106,54 +96,35 @@
             // txtAddress
             // 
             this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAddress.Location = new System.Drawing.Point(202, 447);
+            this.txtAddress.Location = new System.Drawing.Point(216, 400);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(296, 26);
-            this.txtAddress.TabIndex = 27;
+            this.txtAddress.TabIndex = 7;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(80, 449);
+            this.label6.Location = new System.Drawing.Point(94, 402);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 20);
             this.label6.TabIndex = 19;
             this.label6.Text = "Address：";
             // 
-            // txtCardNo
-            // 
-            this.txtCardNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCardNo.Location = new System.Drawing.Point(202, 317);
-            this.txtCardNo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtCardNo.Name = "txtCardNo";
-            this.txtCardNo.Size = new System.Drawing.Size(296, 26);
-            this.txtCardNo.TabIndex = 25;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(62, 317);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(103, 20);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Student ID：";
-            // 
             // txtPhoneNumber
             // 
             this.txtPhoneNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPhoneNumber.Location = new System.Drawing.Point(202, 383);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(216, 336);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(296, 26);
-            this.txtPhoneNumber.TabIndex = 26;
+            this.txtPhoneNumber.TabIndex = 6;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(33, 383);
+            this.label5.Location = new System.Drawing.Point(47, 336);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(131, 20);
@@ -187,7 +158,7 @@
             this.txtFName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtFName.Name = "txtFName";
             this.txtFName.Size = new System.Drawing.Size(149, 26);
-            this.txtFName.TabIndex = 17;
+            this.txtFName.TabIndex = 0;
             // 
             // label1
             // 
@@ -216,7 +187,7 @@
             this.txtLName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtLName.Name = "txtLName";
             this.txtLName.Size = new System.Drawing.Size(149, 26);
-            this.txtLName.TabIndex = 17;
+            this.txtLName.TabIndex = 1;
             // 
             // label4
             // 
@@ -237,23 +208,29 @@
             this.cboClassName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboClassName.Name = "cboClassName";
             this.cboClassName.Size = new System.Drawing.Size(156, 28);
-            this.cboClassName.TabIndex = 23;
+            this.cboClassName.TabIndex = 5;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(204, 174);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
+            this.dateTimePicker1.TabIndex = 4;
             // 
             // FrmAddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(740, 634);
+            this.ClientSize = new System.Drawing.Size(679, 555);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.cboClassName);
-            this.Controls.Add(this.dtpBirthday);
             this.Controls.Add(this.rdoFemale);
             this.Controls.Add(this.rdoMale);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtCardNo);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -276,13 +253,10 @@
 
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.DateTimePicker dtpBirthday;
         private System.Windows.Forms.RadioButton rdoFemale;
         private System.Windows.Forms.RadioButton rdoMale;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtCardNo;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
@@ -293,5 +267,6 @@
         private System.Windows.Forms.TextBox txtLName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cboClassName;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
