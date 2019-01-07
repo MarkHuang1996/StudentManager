@@ -15,6 +15,7 @@ namespace StudentManager
 
 
         public static FrmAddStudent objFrmAddStudent = null;
+        public static FrmStudentManage objFrmStudentManage = null;
 
 
 
@@ -55,6 +56,21 @@ namespace StudentManager
             {
                 // cancel the formClosing function;
                 e.Cancel = true;
+            }
+        }
+
+        //Student Info Manager
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            if(objFrmStudentManage == null)
+            {
+                objFrmStudentManage = new FrmStudentManage();
+                objFrmStudentManage.Show();
+            }
+            else
+            {
+                objFrmStudentManage.Activate();
+                objFrmStudentManage.WindowState = FormWindowState.Normal;
             }
         }
     }

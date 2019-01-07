@@ -79,6 +79,7 @@
             this.txtLoginPwd.PasswordChar = '*';
             this.txtLoginPwd.Size = new System.Drawing.Size(202, 26);
             this.txtLoginPwd.TabIndex = 8;
+            this.txtLoginPwd.Text = "huangrui";
             this.txtLoginPwd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLoginPwd_KeyDown);
             // 
             // txtLoginId
@@ -125,6 +126,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FrmUserLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Log In";
             this.ResumeLayout(false);
             this.PerformLayout();

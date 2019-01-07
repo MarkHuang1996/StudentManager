@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtCardNo = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnModify = new System.Windows.Forms.Button();
             this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
@@ -37,40 +35,23 @@
             this.rdoMale = new System.Windows.Forms.RadioButton();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
+            this.txtNumber = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtStudentId = new System.Windows.Forms.TextBox();
-            this.txtStudentName = new System.Windows.Forms.TextBox();
+            this.txtFName = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtLName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // txtCardNo
-            // 
-            this.txtCardNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCardNo.Location = new System.Drawing.Point(209, 352);
-            this.txtCardNo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtCardNo.Name = "txtCardNo";
-            this.txtCardNo.Size = new System.Drawing.Size(296, 26);
-            this.txtCardNo.TabIndex = 34;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(61, 354);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(115, 20);
-            this.label9.TabIndex = 48;
-            this.label9.Text = "CardNumber：";
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(393, 552);
+            this.btnClose.Location = new System.Drawing.Point(393, 500);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(112, 38);
@@ -80,13 +61,14 @@
             // 
             // btnModify
             // 
-            this.btnModify.Location = new System.Drawing.Point(210, 552);
+            this.btnModify.Location = new System.Drawing.Point(210, 500);
             this.btnModify.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnModify.Name = "btnModify";
             this.btnModify.Size = new System.Drawing.Size(112, 38);
             this.btnModify.TabIndex = 37;
             this.btnModify.Text = "Submit";
             this.btnModify.UseVisualStyleBackColor = true;
+            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
             // 
             // dtpBirthday
             // 
@@ -126,7 +108,7 @@
             // txtAddress
             // 
             this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAddress.Location = new System.Drawing.Point(209, 485);
+            this.txtAddress.Location = new System.Drawing.Point(209, 433);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(296, 26);
@@ -135,26 +117,26 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(92, 487);
+            this.label6.Location = new System.Drawing.Point(92, 435);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 20);
             this.label6.TabIndex = 40;
             this.label6.Text = "Address：";
             // 
-            // txtPhoneNumber
+            // txtNumber
             // 
-            this.txtPhoneNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPhoneNumber.Location = new System.Drawing.Point(209, 422);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(296, 26);
-            this.txtPhoneNumber.TabIndex = 35;
+            this.txtNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNumber.Location = new System.Drawing.Point(209, 370);
+            this.txtNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNumber.Name = "txtNumber";
+            this.txtNumber.Size = new System.Drawing.Size(296, 26);
+            this.txtNumber.TabIndex = 35;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(65, 428);
+            this.label5.Location = new System.Drawing.Point(65, 376);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 20);
@@ -190,14 +172,14 @@
             this.txtStudentId.Size = new System.Drawing.Size(148, 26);
             this.txtStudentId.TabIndex = 45;
             // 
-            // txtStudentName
+            // txtFName
             // 
-            this.txtStudentName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtStudentName.Location = new System.Drawing.Point(209, 102);
-            this.txtStudentName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtStudentName.Name = "txtStudentName";
-            this.txtStudentName.Size = new System.Drawing.Size(149, 26);
-            this.txtStudentName.TabIndex = 28;
+            this.txtFName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFName.Location = new System.Drawing.Point(209, 102);
+            this.txtFName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtFName.Name = "txtFName";
+            this.txtFName.Size = new System.Drawing.Size(149, 26);
+            this.txtFName.TabIndex = 28;
             // 
             // label8
             // 
@@ -215,9 +197,9 @@
             this.label1.Location = new System.Drawing.Point(124, 102);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 20);
+            this.label1.Size = new System.Drawing.Size(98, 20);
             this.label1.TabIndex = 47;
-            this.label1.Text = "Name：";
+            this.label1.Text = "FirstName：";
             // 
             // label10
             // 
@@ -240,13 +222,30 @@
             this.comboBox1.Size = new System.Drawing.Size(156, 28);
             this.comboBox1.TabIndex = 32;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(401, 102);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(98, 20);
+            this.label4.TabIndex = 47;
+            this.label4.Text = "LastName：";
+            // 
+            // txtLName
+            // 
+            this.txtLName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLName.Location = new System.Drawing.Point(486, 102);
+            this.txtLName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtLName.Name = "txtLName";
+            this.txtLName.Size = new System.Drawing.Size(149, 26);
+            this.txtLName.TabIndex = 28;
+            // 
             // FrmEditStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 685);
-            this.Controls.Add(this.txtCardNo);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnModify);
             this.Controls.Add(this.comboBox1);
@@ -255,26 +254,26 @@
             this.Controls.Add(this.rdoMale);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtPhoneNumber);
+            this.Controls.Add(this.txtNumber);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtStudentId);
-            this.Controls.Add(this.txtStudentName);
+            this.Controls.Add(this.txtLName);
+            this.Controls.Add(this.txtFName);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label1);
             this.Name = "FrmEditStudent";
             this.Text = "EditStudent";
+            this.Load += new System.EventHandler(this.FrmEditStudent_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtCardNo;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnModify;
         private System.Windows.Forms.DateTimePicker dtpBirthday;
@@ -282,15 +281,17 @@
         private System.Windows.Forms.RadioButton rdoMale;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtPhoneNumber;
+        private System.Windows.Forms.TextBox txtNumber;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtStudentId;
-        private System.Windows.Forms.TextBox txtStudentName;
+        private System.Windows.Forms.TextBox txtFName;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtLName;
     }
 }
