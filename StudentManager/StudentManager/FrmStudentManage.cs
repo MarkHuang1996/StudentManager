@@ -203,5 +203,10 @@ namespace StudentManager
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void cboClass_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

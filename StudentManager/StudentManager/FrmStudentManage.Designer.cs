@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnEidt = new System.Windows.Forms.Button();
@@ -41,15 +41,15 @@
             this.tsmiModifyStu = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dgvStudentList = new System.Windows.Forms.DataGridView();
-            this.btnQuery = new System.Windows.Forms.Button();
-            this.cboClass = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.StudentId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Birthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClassName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnQuery = new System.Windows.Forms.Button();
+            this.cboClass = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentList)).BeginInit();
@@ -171,14 +171,14 @@
             this.Birthday,
             this.ClassName});
             this.dgvStudentList.ContextMenuStrip = this.contextMenuStrip1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvStudentList.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvStudentList.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvStudentList.Location = new System.Drawing.Point(130, 88);
             this.dgvStudentList.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvStudentList.Name = "dgvStudentList";
@@ -188,38 +188,6 @@
             this.dgvStudentList.Size = new System.Drawing.Size(737, 342);
             this.dgvStudentList.TabIndex = 11;
             this.dgvStudentList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudentList_CellDoubleClick);
-            // 
-            // btnQuery
-            // 
-            this.btnQuery.Location = new System.Drawing.Point(434, 22);
-            this.btnQuery.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnQuery.Name = "btnQuery";
-            this.btnQuery.Size = new System.Drawing.Size(112, 38);
-            this.btnQuery.TabIndex = 10;
-            this.btnQuery.Text = "Go";
-            this.btnQuery.UseVisualStyleBackColor = true;
-            this.btnQuery.Click += new System.EventHandler(this.btnQuery_Click_1);
-            // 
-            // cboClass
-            // 
-            this.cboClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboClass.FormattingEnabled = true;
-            this.cboClass.Location = new System.Drawing.Point(233, 24);
-            this.cboClass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cboClass.Name = "cboClass";
-            this.cboClass.Size = new System.Drawing.Size(174, 28);
-            this.cboClass.TabIndex = 6;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(126, 30);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 20);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Course：";
             // 
             // StudentId
             // 
@@ -271,6 +239,39 @@
             this.ClassName.Name = "ClassName";
             this.ClassName.ReadOnly = true;
             this.ClassName.Width = 96;
+            // 
+            // btnQuery
+            // 
+            this.btnQuery.Location = new System.Drawing.Point(434, 22);
+            this.btnQuery.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnQuery.Name = "btnQuery";
+            this.btnQuery.Size = new System.Drawing.Size(112, 38);
+            this.btnQuery.TabIndex = 10;
+            this.btnQuery.Text = "Go";
+            this.btnQuery.UseVisualStyleBackColor = true;
+            this.btnQuery.Click += new System.EventHandler(this.btnQuery_Click_1);
+            // 
+            // cboClass
+            // 
+            this.cboClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboClass.FormattingEnabled = true;
+            this.cboClass.Location = new System.Drawing.Point(233, 24);
+            this.cboClass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cboClass.Name = "cboClass";
+            this.cboClass.Size = new System.Drawing.Size(174, 28);
+            this.cboClass.TabIndex = 6;
+            this.cboClass.SelectedIndexChanged += new System.EventHandler(this.cboClass_SelectedIndexChanged_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(126, 30);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 20);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Course：";
             // 
             // FrmStudentManage
             // 

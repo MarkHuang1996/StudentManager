@@ -210,6 +210,7 @@
             this.tsbScoreAnalysis.Name = "tsbScoreAnalysis";
             this.tsbScoreAnalysis.Size = new System.Drawing.Size(192, 29);
             this.tsbScoreAnalysis.Text = "Query and Analysis";
+            this.tsbScoreAnalysis.Click += new System.EventHandler(this.tsbScoreAnalysis_Click);
             // 
             // tsbQuery
             // 
