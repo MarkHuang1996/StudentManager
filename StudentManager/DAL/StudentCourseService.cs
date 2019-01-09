@@ -36,6 +36,12 @@ namespace DAL
 
         }
 
+        public DataSet GetAllClass()
+        {
+            string sql = "select * from StudentClass";
+            return SQLHelper.GetDataSet(sql);
+        }
+
 
     }
 }

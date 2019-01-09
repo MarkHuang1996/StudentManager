@@ -77,5 +77,30 @@ namespace DAL
             
         }
 
+        /// <summary>
+        /// create a DATASET 
+        /// </summary>
+        /// <param name="sql"></param>
+        /// <returns></returns>
+        public static DataSet GetDataSet (string sql)
+        {
+            SqlConnection conn = new SqlConnection(connString);
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();//创建一个内存使用数
+
+            try
+            {
+                conn.Open();
+                da.Fill(ds);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
     }
 }

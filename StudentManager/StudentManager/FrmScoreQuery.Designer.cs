@@ -30,11 +30,6 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.dgvScoreList = new System.Windows.Forms.DataGridView();
-            this.StudentId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClassName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CSharp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SQLServerDB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnShowAll = new System.Windows.Forms.Button();
             this.txtScore = new System.Windows.Forms.TextBox();
             this.cboClass = new System.Windows.Forms.ComboBox();
@@ -59,12 +54,6 @@
             this.dgvScoreList.AllowUserToAddRows = false;
             this.dgvScoreList.AllowUserToDeleteRows = false;
             this.dgvScoreList.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dgvScoreList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.StudentId,
-            this.StudentName,
-            this.ClassName,
-            this.CSharp,
-            this.SQLServerDB});
             this.dgvScoreList.Location = new System.Drawing.Point(56, 120);
             this.dgvScoreList.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvScoreList.Name = "dgvScoreList";
@@ -72,43 +61,6 @@
             this.dgvScoreList.RowTemplate.Height = 23;
             this.dgvScoreList.Size = new System.Drawing.Size(728, 373);
             this.dgvScoreList.TabIndex = 15;
-            // 
-            // StudentId
-            // 
-            this.StudentId.DataPropertyName = "StudentId";
-            this.StudentId.HeaderText = "学号";
-            this.StudentId.Name = "StudentId";
-            this.StudentId.ReadOnly = true;
-            this.StudentId.Width = 60;
-            // 
-            // StudentName
-            // 
-            this.StudentName.DataPropertyName = "StudentName";
-            this.StudentName.HeaderText = "姓名";
-            this.StudentName.Name = "StudentName";
-            this.StudentName.ReadOnly = true;
-            // 
-            // ClassName
-            // 
-            this.ClassName.DataPropertyName = "ClassName";
-            this.ClassName.HeaderText = "班级";
-            this.ClassName.Name = "ClassName";
-            this.ClassName.ReadOnly = true;
-            // 
-            // CSharp
-            // 
-            this.CSharp.DataPropertyName = "CSharp";
-            this.CSharp.HeaderText = "C#成绩";
-            this.CSharp.Name = "CSharp";
-            this.CSharp.ReadOnly = true;
-            this.CSharp.Width = 80;
-            // 
-            // SQLServerDB
-            // 
-            this.SQLServerDB.DataPropertyName = "SQLServerDB";
-            this.SQLServerDB.HeaderText = "数据库成绩";
-            this.SQLServerDB.Name = "SQLServerDB";
-            this.SQLServerDB.ReadOnly = true;
             // 
             // btnShowAll
             // 
@@ -119,6 +71,7 @@
             this.btnShowAll.TabIndex = 22;
             this.btnShowAll.Text = "Show all Scores";
             this.btnShowAll.UseVisualStyleBackColor = true;
+            this.btnShowAll.Click += new System.EventHandler(this.btnShowAll_Click);
             // 
             // txtScore
             // 
@@ -128,6 +81,7 @@
             this.txtScore.Name = "txtScore";
             this.txtScore.Size = new System.Drawing.Size(101, 26);
             this.txtScore.TabIndex = 21;
+            this.txtScore.TextChanged += new System.EventHandler(this.txtScore_TextChanged);
             // 
             // cboClass
             // 
@@ -139,6 +93,7 @@
             this.cboClass.Name = "cboClass";
             this.cboClass.Size = new System.Drawing.Size(180, 28);
             this.cboClass.TabIndex = 17;
+            this.cboClass.SelectedIndexChanged += new System.EventHandler(this.cboClass_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -185,6 +140,8 @@
             this.Controls.Add(this.btnClose);
             this.Name = "FrmScoreQuery";
             this.Text = "FrmScoreQuery";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmScoreQuery_FormClosed);
+            this.Load += new System.EventHandler(this.FrmScoreQuery_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvScoreList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -195,11 +152,6 @@
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvScoreList;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudentId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudentName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClassName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CSharp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SQLServerDB;
         private System.Windows.Forms.Button btnShowAll;
         private System.Windows.Forms.TextBox txtScore;
         private System.Windows.Forms.ComboBox cboClass;

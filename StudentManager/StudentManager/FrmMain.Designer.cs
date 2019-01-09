@@ -219,6 +219,7 @@
             this.tsbQuery.Name = "tsbQuery";
             this.tsbQuery.Size = new System.Drawing.Size(142, 29);
             this.tsbQuery.Text = "Quick Search";
+            this.tsbQuery.Click += new System.EventHandler(this.tsbQuery_Click);
             // 
             // toolStripSeparator4
             // 

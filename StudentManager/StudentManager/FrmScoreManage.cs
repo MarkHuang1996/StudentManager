@@ -52,23 +52,13 @@ namespace StudentManager
             this.Close();
         }
 
-        private void cboClass_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if(cboClass.SelectedIndex != -1)
-            {
-              
-                className = this.cboClass.Text.Trim();
-                writeTheList(className);
-            }
-
-           
-        }
+  
 
         private void writeTheList(string className)
         {
             this.dgvScoreList.AutoGenerateColumns = false;
             this.dgvScoreList.DataSource = objStudentScoreService.GetScoreListByName(className);
-            Dictionary<string, string> dic = objStudentScoreService.GetScoreInfo();
+            Dictionary<string, string> dic = objStudentScoreService.GetScoreInfo(className);
             this.lblAttendCount.Text = dic["stuCount"];
             this.lblCSharpAvg.Text = dic["avgCSharp"];
             this.lblDBAvg.Text = dic["avgDb"];
@@ -78,6 +68,21 @@ namespace StudentManager
             List<string> lis = objStudentScoreService.GetAbsentList();
             this.lblList.Items.Clear();
             this.lblList.Items.AddRange(lis.ToArray());
+        }
+
+        private void FrmScoreManage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FrmMain.objFrmScoreManage = null; 
+        }
+
+        private void cboClass_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cboClass.SelectedIndex != -1)
+            {
+
+                className = this.cboClass.Text.Trim();
+                writeTheList(className);
+            }
         }
     }
     

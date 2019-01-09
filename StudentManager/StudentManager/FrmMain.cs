@@ -17,6 +17,8 @@ namespace StudentManager
         public static FrmAddStudent objFrmAddStudent = null;
         public static FrmStudentManage objFrmStudentManage = null;
         public static FrmScoreManage objFrmScoreManage = null;
+        public static FrmScoreQuery objFrmScoreQuery = null;
+
 
  
 
@@ -90,6 +92,20 @@ namespace StudentManager
             }
 
             
+        }
+
+        private void tsbQuery_Click(object sender, EventArgs e)
+        {
+            if(objFrmScoreQuery == null)
+            {
+                objFrmScoreQuery = new FrmScoreQuery();
+                objFrmScoreQuery.Show();
+            }
+            else
+            {
+                objFrmScoreQuery.Activate();
+                objFrmScoreQuery.WindowState = FormWindowState.Normal;
+            }
         }
     }
 }

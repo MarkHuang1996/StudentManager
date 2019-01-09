@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnStat = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -46,12 +46,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvScoreList = new System.Windows.Forms.DataGridView();
-            this.cboClass = new System.Windows.Forms.ComboBox();
             this.StudentId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClassName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CSharp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SQLServerDB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cboClass = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             this.gbStat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScoreList)).BeginInit();
@@ -234,14 +234,14 @@
             this.ClassName,
             this.CSharp,
             this.SQLServerDB});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvScoreList.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvScoreList.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvScoreList.Location = new System.Drawing.Point(47, 103);
             this.dgvScoreList.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvScoreList.Name = "dgvScoreList";
@@ -250,18 +250,6 @@
             this.dgvScoreList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvScoreList.Size = new System.Drawing.Size(728, 310);
             this.dgvScoreList.TabIndex = 19;
-            // 
-            // cboClass
-            // 
-            this.cboClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboClass.FormattingEnabled = true;
-            this.cboClass.Location = new System.Drawing.Point(152, 45);
-            this.cboClass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cboClass.Name = "cboClass";
-            this.cboClass.Size = new System.Drawing.Size(180, 28);
-            this.cboClass.TabIndex = 16;
-            this.cboClass.SelectedIndexChanged += new System.EventHandler(this.cboClass_SelectedIndexChanged);
             // 
             // StudentId
             // 
@@ -300,6 +288,19 @@
             this.SQLServerDB.Name = "SQLServerDB";
             this.SQLServerDB.ReadOnly = true;
             // 
+            // cboClass
+            // 
+            this.cboClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboClass.FormattingEnabled = true;
+            this.cboClass.Location = new System.Drawing.Point(152, 45);
+            this.cboClass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cboClass.Name = "cboClass";
+            this.cboClass.Size = new System.Drawing.Size(180, 28);
+            this.cboClass.TabIndex = 16;
+            
+            this.cboClass.SelectedValueChanged += new System.EventHandler(this.cboClass_SelectedValueChanged);
+            // 
             // FrmScoreManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -314,6 +315,7 @@
             this.Controls.Add(this.cboClass);
             this.Name = "FrmScoreManage";
             this.Text = "FrmScoreManage";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmScoreManage_FormClosed);
             this.Load += new System.EventHandler(this.FrmScoreManage_Load);
             this.groupBox2.ResumeLayout(false);
             this.gbStat.ResumeLayout(false);

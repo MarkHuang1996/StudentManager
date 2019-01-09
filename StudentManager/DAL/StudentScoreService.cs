@@ -50,10 +50,25 @@ namespace DAL
         /// get socreInfo
         /// </summary>
         /// <returns></returns>
-        public Dictionary<string, string> GetScoreInfo()
-        {
-            string sql = "select stuCount  = count(*) ,avgCSharp = avg(CSharp) , avgDb = avg(SQLServer) from ScoreList ; ";
-            sql += "select absentCount = Count(*) from Students where StudentId not in (select StudentId  from ScoreList)";
+        public Dictionary<string, string> GetScoreInfo(string ClassName)
+        { 
+            string sql = "select stuCount  = count(*) ,avgCSharp = avg(CSharp) , avgDb = avg(SQLServer) from ScoreList ";
+            if (ClassName != null && ClassName.Length != 0)
+            {
+                sql += "inner join StudentClass on StudentClass.ClassId = Students.ClassId ";
+                sql += "inner join ScoreList on ScoreList.StudentId = Students.Studentid ";
+                sql += string.Format("where ClassName ='{0}' ", ClassName);
+            }
+
+            sql += "select absentCount = Count(*) from Students where StudentId not in (select StudentId  from ScoreList ) ";
+            if (ClassName != null && ClassName.Length != 0)
+            {
+                sql += "inner join StudentClass on StudentClass.ClassId = Students.ClassId ";
+                sql += "inner join ScoreList on ScoreList.StudentId = Students.Studentid ";
+                sql += string.Format("where ClassName ='{0}' ", ClassName);
+            }
+
+
             Dictionary<string, string> scoreInfo = null;
             SqlDataReader reder = SQLHelper.GetReader(sql);
             if (reder.Read())
@@ -92,5 +107,17 @@ namespace DAL
 
         }
 
+        #region DataSet
+        public DataSet GetAllScoreList()
+        {
+            string sql = "select Students.StudentId,FirstName,LastName,ClassName,CSharp,SQLServer ";
+            sql += "from Students ";
+            sql += "inner join StudentClass on StudentClass.ClassId  = Students.ClassId ";
+            sql += "inner join ScoreList on ScoreList.StudentId =  Students.StudentId";
+
+            return SQLHelper.GetDataSet(sql);
+        }
+
+        #endregion
     }
 }

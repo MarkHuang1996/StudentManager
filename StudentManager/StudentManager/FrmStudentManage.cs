@@ -25,7 +25,7 @@ namespace StudentManager
             this.cboClass.ValueMember = "ClassId";
             this.cboClass.SelectedIndex = -1;
         }
-
+        #region useless
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
 
@@ -75,6 +75,8 @@ namespace StudentManager
         {
 
         }
+        #endregion
+
 
         private void btnQuery_Click_1(object sender, EventArgs e)
         {
@@ -207,6 +209,11 @@ namespace StudentManager
         private void cboClass_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void FrmStudentManage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FrmMain.objFrmStudentManage = null;
         }
     }
 }
